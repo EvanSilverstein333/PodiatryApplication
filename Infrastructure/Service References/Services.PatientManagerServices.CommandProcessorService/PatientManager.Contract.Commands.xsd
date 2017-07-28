@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/PatientManager.Contract.Commands" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/PatientManager.Contract.Commands" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/PatientManager.Contract.Dto" />
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/System" />
+  <xs:complexType name="AddPatientCommand">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:MessageNotifyOnCompletion">
+        <xs:sequence>
+          <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/PatientManager.Contract.Dto" minOccurs="0" name="ContactInfo" nillable="true" type="q1:ContactInfoDto" />
+          <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/PatientManager.Contract.Dto" minOccurs="0" name="HealthId" nillable="true" type="q2:HealthIdentificationDto" />
+          <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/PatientManager.Contract.Dto" minOccurs="0" name="Patient" nillable="true" type="q3:PatientDto" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AddPatientCommand" nillable="true" type="tns:AddPatientCommand" />
+  <xs:complexType name="MessageNotifyOnCompletion">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:element name="MessageNotifyOnCompletion" nillable="true" type="tns:MessageNotifyOnCompletion" />
+  <xs:complexType name="AddPatientVisitCommand">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:MessageNotifyOnCompletion">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="PatientId" type="ser:guid" />
+          <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/PatientManager.Contract.Dto" minOccurs="0" name="Visit" nillable="true" type="q4:PatientVisitDto" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AddPatientVisitCommand" nillable="true" type="tns:AddPatientVisitCommand" />
+  <xs:complexType name="DeletePatientCommand">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:MessageNotifyOnCompletion">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="PatientId" type="ser:guid" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DeletePatientCommand" nillable="true" type="tns:DeletePatientCommand" />
+  <xs:complexType name="DeletePatientVisitCommand">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:MessageNotifyOnCompletion">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="VisitId" type="ser:guid" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DeletePatientVisitCommand" nillable="true" type="tns:DeletePatientVisitCommand" />
+  <xs:complexType name="MessageCompletedEventArgs">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/System" base="q5:EventArgs">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MessageCompletedEventArgs" nillable="true" type="tns:MessageCompletedEventArgs" />
+  <xs:complexType name="UpdateContactInformationCommand">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:MessageNotifyOnCompletion">
+        <xs:sequence>
+          <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/PatientManager.Contract.Dto" minOccurs="0" name="ContactInfo" nillable="true" type="q6:ContactInfoDto" />
+          <xs:element minOccurs="0" name="PatientId" type="ser:guid" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UpdateContactInformationCommand" nillable="true" type="tns:UpdateContactInformationCommand" />
+  <xs:complexType name="UpdatePatientCommand">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:MessageNotifyOnCompletion">
+        <xs:sequence>
+          <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/PatientManager.Contract.Dto" minOccurs="0" name="Patient" nillable="true" type="q7:PatientDto" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UpdatePatientCommand" nillable="true" type="tns:UpdatePatientCommand" />
+  <xs:complexType name="UpdatePatientVisitCommand">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:MessageNotifyOnCompletion">
+        <xs:sequence>
+          <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/PatientManager.Contract.Dto" minOccurs="0" name="Visit" nillable="true" type="q8:PatientVisitDto" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UpdatePatientVisitCommand" nillable="true" type="tns:UpdatePatientVisitCommand" />
+  <xs:complexType name="UpdateHealthIdCommand">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:MessageNotifyOnCompletion">
+        <xs:sequence>
+          <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/PatientManager.Contract.Dto" minOccurs="0" name="HealthId" nillable="true" type="q9:HealthIdentificationDto" />
+          <xs:element minOccurs="0" name="PatientId" type="ser:guid" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UpdateHealthIdCommand" nillable="true" type="tns:UpdateHealthIdCommand" />
+</xs:schema>

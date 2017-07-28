@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="a43fa500-4255-4b4b-94b1-e9ab08278498" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="net.tcp://localhost:7080/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="d2e7e571-6f45-46b7-b336-5be3dde1126d" SourceId="1" SourceUrl="net.tcp://localhost:7080/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="fd597251-cebc-49c4-9a82-afdbec0589e1" SourceId="1" SourceUrl="net.tcp://localhost:7080/mex" />
+    <MetadataFile FileName="FinanceManager.Contract.Queries.xsd" MetadataType="Schema" ID="5f27f25a-81fe-44ae-9251-b177e33051ee" SourceId="1" SourceUrl="net.tcp://localhost:7080/mex" />
+    <MetadataFile FileName="FinanceManager.Contract.Events.xsd" MetadataType="Schema" ID="77a835f0-6d2d-4bcd-a4dc-22eada7acfdd" SourceId="1" SourceUrl="net.tcp://localhost:7080/mex" />
+    <MetadataFile FileName="FinanceManager.Contract.Dto.xsd" MetadataType="Schema" ID="235bf0e3-4f5a-4f62-9dc1-6b1a3bd7eea0" SourceId="1" SourceUrl="net.tcp://localhost:7080/mex" />
+    <MetadataFile FileName="ValueObjects.Finance.xsd" MetadataType="Schema" ID="708b7ad0-682d-4d4b-9554-83a428aa7b78" SourceId="1" SourceUrl="net.tcp://localhost:7080/mex" />
+    <MetadataFile FileName="FinanceManager.Contract.Commands.xsd" MetadataType="Schema" ID="0ce8e427-2250-470f-875c-f91a8173ec1f" SourceId="1" SourceUrl="net.tcp://localhost:7080/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="2304aea0-fa7e-4739-b7ad-b3174c1b710a" SourceId="1" SourceUrl="net.tcp://localhost:7080/mex" />
+    <MetadataFile FileName="ValueObjects.Wcf.xsd" MetadataType="Schema" ID="49f56937-cebd-4998-aafd-aacd3285955d" SourceId="1" SourceUrl="net.tcp://localhost:7080/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

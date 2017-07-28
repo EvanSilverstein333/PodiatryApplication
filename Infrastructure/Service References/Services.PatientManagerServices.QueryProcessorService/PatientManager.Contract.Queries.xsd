@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/PatientManager.Contract.Queries" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/PatientManager.Contract.Queries" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="FindPatientsBySearchTextQuery">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SearchText" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FindPatientsBySearchTextQuery" nillable="true" type="tns:FindPatientsBySearchTextQuery" />
+  <xs:complexType name="GetAllPatientsQuery">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:element name="GetAllPatientsQuery" nillable="true" type="tns:GetAllPatientsQuery" />
+  <xs:complexType name="GetAllPatientVisitsQuery">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:element name="GetAllPatientVisitsQuery" nillable="true" type="tns:GetAllPatientVisitsQuery" />
+  <xs:complexType name="GetContactInfoByPatientQuery">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PatientId" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetContactInfoByPatientQuery" nillable="true" type="tns:GetContactInfoByPatientQuery" />
+  <xs:complexType name="GetHealthIdByPatientQuery">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PatientId" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetHealthIdByPatientQuery" nillable="true" type="tns:GetHealthIdByPatientQuery" />
+  <xs:complexType name="GetPatientVisitByIdQuery">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetPatientVisitByIdQuery" nillable="true" type="tns:GetPatientVisitByIdQuery" />
+  <xs:complexType name="GetPatientByIdQuery">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetPatientByIdQuery" nillable="true" type="tns:GetPatientByIdQuery" />
+  <xs:complexType name="GetPatientVisitsByPatientQuery">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PatientId" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetPatientVisitsByPatientQuery" nillable="true" type="tns:GetPatientVisitsByPatientQuery" />
+</xs:schema>

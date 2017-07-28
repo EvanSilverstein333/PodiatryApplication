@@ -1,0 +1,385 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0CD6A49E-3F0F-457D-B9DA-B9B3F929E0E0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>View</RootNamespace>
+    <AssemblyName>View</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FinanceManager.Contract, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\FinanceManager\Contract\bin\Debug\FinanceManager.Contract.dll</HintPath>
+    </Reference>
+    <Reference Include="NullableDateTimePicker">
+      <HintPath>..\..\..\DevTools\MyControls\NullableDateTimePicker\NullableDateTimePicker\bin\Debug\NullableDateTimePicker.dll</HintPath>
+    </Reference>
+    <Reference Include="PatientManager.Contract, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\PatientManager\Contract\bin\Debug\PatientManager.Contract.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="ValueObjects, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Common\CommonItems\ValueObjects\bin\Debug\ValueObjects.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsForms">
+      <HintPath>..\..\Common\CommonItems\WindowsForms\bin\Debug\WindowsForms.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Dialogs\NewFinancialTransactionDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\NewFinancialTransactionDialog.designer.cs">
+      <DependentUpon>NewFinancialTransactionDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Events\EventListener.cs" />
+    <Compile Include="Events\EventPublisher.cs" />
+    <Compile Include="Events\EventOrchestrator.cs" />
+    <Compile Include="Events\IEventListener.cs" />
+    <Compile Include="Events\IEventPublisher.cs" />
+    <Compile Include="Events\Orchestrator\UpdateOrchestratorViewRequested.cs" />
+    <Compile Include="Events\Patient\PatientSelectionChanged.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewLauncher\ContactInformationView\LaunchContactInformationEditViewEvent.cs" />
+    <Compile Include="ViewLauncher\ContactInformationView\LaunchContactInformationViewEventHandler.cs" />
+    <Compile Include="ViewLauncher\FinancialAccountView\LaunchFinancialAccountDetailsViewEvent.cs" />
+    <Compile Include="ViewLauncher\FinancialAccountView\LaunchFinancialAccountViewEventHandler.cs" />
+    <Compile Include="ViewLauncher\FinancialTransactionView\LaunchFinancialTransactionCreateViewEvent.cs" />
+    <Compile Include="ViewLauncher\FinancialTransactionView\LaunchFinancialTransactionEditViewEvent.cs" />
+    <Compile Include="ViewLauncher\FinancialTransactionView\LaunchFinancialTransactionViewEvent.cs" />
+    <Compile Include="ViewLauncher\FinancialTransactionView\LaunchFinancialTransactionViewEventHandler.cs" />
+    <Compile Include="ViewLauncher\HealthcardView\LaunchHealthcardViewEditEvent.cs" />
+    <Compile Include="ViewLauncher\HealthcardView\LaunchHealthcardViewEventHandler.cs" />
+    <Compile Include="ViewLauncher\HomeView\LaunchHomeViewEvent.cs" />
+    <Compile Include="ViewLauncher\HomeView\LaunchHomeViewEventHandler.cs" />
+    <Compile Include="ViewLauncher\ILaunchableView.cs" />
+    <Compile Include="ViewLauncher\ILaunchableViewHandler.cs" />
+    <Compile Include="ViewLauncher\IViewLauncher.cs" />
+    <Compile Include="ViewLauncher\PatientView\LaunchPatientCreateViewEvent.cs" />
+    <Compile Include="ViewLauncher\PatientView\LaunchPatientEditViewEvent.cs" />
+    <Compile Include="ViewLauncher\PatientView\LaunchPatientIndexViewEvent.cs" />
+    <Compile Include="ViewLauncher\PatientView\LaunchPatientViewEventHandler.cs" />
+    <Compile Include="ViewLauncher\PatientVisitView\LaunchPatientVisitCreateViewEvent.cs" />
+    <Compile Include="ViewLauncher\PatientVisitView\LaunchPatientVisitEditViewEvent.cs" />
+    <Compile Include="ViewLauncher\PatientVisitView\LaunchPatientVisitIndexViewEvent.cs" />
+    <Compile Include="ViewLauncher\PatientVisitView\LaunchPatientVisitViewEventHandler.cs" />
+    <Compile Include="Views\ContactInformation\ContactInformationEdit.xaml.cs">
+      <DependentUpon>ContactInformationEdit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ContactInformation\ContactInformationDetails.xaml.cs">
+      <DependentUpon>ContactInformationDetails.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FinancialAccount\FinancialAccountActionPane.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FinancialAccount\FinancialAccountActionPane.Designer.cs">
+      <DependentUpon>FinancialAccountActionPane.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FinancialTransaction\FinancialTransactionIndex.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FinancialTransaction\FinancialTransactionIndex.Designer.cs">
+      <DependentUpon>FinancialTransactionIndex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FinancialTransaction\FinancialTransactionActionPane.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FinancialTransaction\FinancialTransactionActionPane.Designer.cs">
+      <DependentUpon>FinancialTransactionActionPane.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FinancialTransaction\FinancialTransactionCreate.xaml.cs">
+      <DependentUpon>FinancialTransactionCreate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FinancialTransaction\FinancialTransactionEdit.xaml.cs">
+      <DependentUpon>FinancialTransactionEdit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FinancialTransaction\TransactionControl.xaml.cs">
+      <DependentUpon>TransactionControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Healthcard\HealthcardEdit.xaml.cs">
+      <DependentUpon>HealthcardEdit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Healthcard\HealthcardDetails.xaml.cs">
+      <DependentUpon>HealthcardDetails.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home\HomeView.xaml.cs">
+      <DependentUpon>HomeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PatientVisit\PatientVisitControl.xaml.cs">
+      <DependentUpon>PatientVisitControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PatientVisit\PatientVisitEdit.xaml.cs">
+      <DependentUpon>PatientVisitEdit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PatientVisit\PatientVisitCreate.xaml.cs">
+      <DependentUpon>PatientVisitCreate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PatientVisit\PatientVisitActionPane.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\PatientVisit\PatientVisitActionPane.Designer.cs">
+      <DependentUpon>PatientVisitActionPane.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Patient\GenderControl.xaml.cs">
+      <DependentUpon>GenderControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Patient\GenderOptions.cs" />
+    <Compile Include="Views\Patient\PatientActionPane.xaml.cs">
+      <DependentUpon>PatientActionPane.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Patient\PatientActionPane2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Patient\PatientActionPane2.Designer.cs">
+      <DependentUpon>PatientActionPane2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\NewFinancialAccountDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\NewFinancialAccountDialog.Designer.cs">
+      <DependentUpon>NewFinancialAccountDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\NewPatientDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\NewPatientDialog.designer.cs">
+      <DependentUpon>NewPatientDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\NewPatientVisitDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\NewPatientVisitDialog.designer.cs">
+      <DependentUpon>NewPatientVisitDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\FinancialAccount\FinanacialAccountDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FinancialAccount\FinanacialAccountDetails.Designer.cs">
+      <DependentUpon>FinanacialAccountDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ContactInformation\ContactInformationView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ContactInformation\ContactInformationView.Designer.cs">
+      <DependentUpon>ContactInformationView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Healthcard\HealthcardView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Healthcard\HealthcardView.Designer.cs">
+      <DependentUpon>HealthcardView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\OrchestratorView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\OrchestratorView.designer.cs">
+      <DependentUpon>OrchestratorView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Patient\IdentityControl.xaml.cs">
+      <DependentUpon>IdentityControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Patient\PatientEdit.xaml.cs">
+      <DependentUpon>PatientEdit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Patient\PatientCreate.xaml.cs">
+      <DependentUpon>PatientCreate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Patient\PatientIndex.xaml.cs">
+      <DependentUpon>PatientIndex.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Patient\PatientIndex2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Patient\PatientIndex2.designer.cs">
+      <DependentUpon>PatientIndex2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PatientVisit\PatientVisitIndex.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\PatientVisit\PatientVisitIndex.designer.cs">
+      <DependentUpon>PatientVisitIndex.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Controllers\Controllers.csproj">
+      <Project>{756385d7-6630-4099-9ee4-7d4e9831b82d}</Project>
+      <Name>Controllers</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dialogs\NewFinancialTransactionDialog.resx">
+      <DependentUpon>NewFinancialTransactionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FinancialAccount\FinancialAccountActionPane.resx">
+      <DependentUpon>FinancialAccountActionPane.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FinancialTransaction\FinancialTransactionIndex.resx">
+      <DependentUpon>FinancialTransactionIndex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FinancialTransaction\FinancialTransactionActionPane.resx">
+      <DependentUpon>FinancialTransactionActionPane.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PatientVisit\PatientVisitActionPane.resx">
+      <DependentUpon>PatientVisitActionPane.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Patient\PatientActionPane2.resx">
+      <DependentUpon>PatientActionPane2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewFinancialAccountDialog.resx">
+      <DependentUpon>NewFinancialAccountDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewPatientDialog.resx">
+      <DependentUpon>NewPatientDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewPatientVisitDialog.resx">
+      <DependentUpon>NewPatientVisitDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FinancialAccount\FinanacialAccountDetails.resx">
+      <DependentUpon>FinanacialAccountDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ContactInformation\ContactInformationView.resx">
+      <DependentUpon>ContactInformationView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Healthcard\HealthcardView.resx">
+      <DependentUpon>HealthcardView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\OrchestratorView.resx">
+      <DependentUpon>OrchestratorView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Patient\PatientIndex2.resx">
+      <DependentUpon>PatientIndex2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PatientVisit\PatientVisitIndex.resx">
+      <DependentUpon>PatientVisitIndex.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Page Include="Views\ContactInformation\ContactInformationEdit.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ContactInformation\ContactInformationDetails.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\FinancialTransaction\FinancialTransactionCreate.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\FinancialTransaction\FinancialTransactionEdit.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\FinancialTransaction\TransactionControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Healthcard\HealthcardEdit.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Healthcard\HealthcardDetails.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Home\HomeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PatientVisit\PatientVisitControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\PatientVisit\PatientVisitEdit.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\PatientVisit\PatientVisitCreate.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Patient\GenderControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Patient\IdentityControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Patient\PatientActionPane.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Patient\PatientEdit.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Patient\PatientCreate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Patient\PatientIndex.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

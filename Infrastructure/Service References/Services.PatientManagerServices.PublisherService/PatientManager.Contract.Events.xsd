@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/PatientManager.Contract.Events" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/PatientManager.Contract.Events" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ContactInfoChangedEvent">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ContactInfoId" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ContactInfoChangedEvent" nillable="true" type="tns:ContactInfoChangedEvent" />
+  <xs:complexType name="HealthcardChangedEvent">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="HealthcardId" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HealthcardChangedEvent" nillable="true" type="tns:HealthcardChangedEvent" />
+  <xs:complexType name="NewPatientRegisteredEvent">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PatientId" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="NewPatientRegisteredEvent" nillable="true" type="tns:NewPatientRegisteredEvent" />
+  <xs:complexType name="PatientIdentityChangedEvent">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PatientId" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PatientIdentityChangedEvent" nillable="true" type="tns:PatientIdentityChangedEvent" />
+  <xs:complexType name="PatientRemovedEvent">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PatientId" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PatientRemovedEvent" nillable="true" type="tns:PatientRemovedEvent" />
+  <xs:complexType name="PatientVisitChangedEvent">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PatientId" type="ser:guid" />
+      <xs:element minOccurs="0" name="VisitId" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PatientVisitChangedEvent" nillable="true" type="tns:PatientVisitChangedEvent" />
+  <xs:complexType name="PatientVisitedEvent">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PatientId" type="ser:guid" />
+      <xs:element minOccurs="0" name="VisitId" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PatientVisitedEvent" nillable="true" type="tns:PatientVisitedEvent" />
+  <xs:complexType name="PatientVisitRemovedEvent">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PatientId" type="ser:guid" />
+      <xs:element minOccurs="0" name="VisitId" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PatientVisitRemovedEvent" nillable="true" type="tns:PatientVisitRemovedEvent" />
+</xs:schema>

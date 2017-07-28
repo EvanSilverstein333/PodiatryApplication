@@ -1,0 +1,116 @@
+﻿<UserControl x:Class="View.Views.Patient.PatientActionPane"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:View.Views.Patient"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+
+
+    <UserControl.Resources>
+        <Thickness x:Key="ctrlPadding" Top="5" Left="5" Right="5" Bottom ="5"></Thickness>
+        <Thickness x:Key="myMargin" Top="0" Left="0" Right="0" Bottom ="5"></Thickness>
+    </UserControl.Resources>
+
+
+    <StackPanel>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+
+            </Grid.RowDefinitions>
+            <Label
+                Grid.Row="0" Grid.Column="0"
+                Content="Search"
+                Foreground="White"
+                Padding="{StaticResource ctrlPadding}"
+
+                   />
+            <TextBox
+                TextChanged="SearchBox_TextChanged"
+                x:Name="searchBox"
+                Grid.Row="0" Grid.Column="1"
+                
+                Padding="{StaticResource ctrlPadding}"
+                   />
+        </Grid>
+        <Button
+            Click="BtnAddPatient_Click"
+            x:Name="btnAddPatient"
+            Content="Add Patient"
+                Padding="{StaticResource ctrlPadding}"
+
+            />
+        <Button
+            Click="BtnRemovePatient_Click"
+            x:Name="btnRemovePatient"
+            Content="Remove Patient"
+            Padding="{StaticResource ctrlPadding}"
+
+            />
+        <StackPanel
+            x:Name="patientDetailsPanel"
+            Margin="0,10,0,0"
+            >
+            
+            <Label 
+                x:Name="lblPatientName"
+                Content="Name"
+                FontSize="18"
+                Foreground="White"
+                   />
+            <Button 
+                x:Name="btnUpdateIdentity"
+                Content="Update Identity"
+                Click="btnUpdateIdentity_Click"
+                Padding="{StaticResource ctrlPadding}"
+
+                />
+            <Button 
+                x:Name="btnUpdateHealthcard"
+                Content="Update Healthcard"
+                Click="btnUpdateHealthcard_Click"
+                Padding="{StaticResource ctrlPadding}"
+                />
+            <Button 
+                x:Name="btnUpdateContactInfo"
+                Content="Update Contact Info"
+                Click="BtnUpdateContactInfo_Click"
+                Padding="{StaticResource ctrlPadding}"
+                />
+
+            <Button 
+                Click="BtnSeeMedicalHistory_Click"
+                x:Name="btnSeeMedicalHistory"
+                Content="See Medical History"
+                Background="Transparent"
+                HorizontalAlignment="Left"
+                BorderBrush="Transparent"
+                Foreground="Blue"
+                Margin="0,10,0,0"
+                
+                
+                />
+            <Button 
+                Click="BtnSeeFinances_Click"
+                x:Name="btnSeeFinances"
+                Content="See Finances"
+                Background="Transparent"
+                BorderBrush="Transparent"
+                HorizontalAlignment="Left"
+                Foreground="Blue"
+                />
+
+
+
+        </StackPanel>
+
+
+
+    </StackPanel>
+</UserControl>

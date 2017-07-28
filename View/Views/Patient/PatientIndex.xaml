@@ -1,0 +1,52 @@
+﻿<UserControl x:Class="View.Views.Patient.PatientIndex"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:View.Views.Patient"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <DockPanel>
+        <DataGrid
+            x:Name="dgvPatients"
+            AutoGenerateColumns="False"
+            ColumnWidth="*"
+            SelectionUnit="FullRow"
+            SelectionMode="Single"
+            CanUserSortColumns="True"
+            IsReadOnly="True"
+            BorderBrush="Transparent"
+            HeadersVisibility="Column"
+            GridLinesVisibility="Vertical"
+            VerticalGridLinesBrush="Gray"
+            SelectionChanged="DgvPatients_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn
+                    x:Name="colFirstName"
+                    Header="First Name"
+                    Width="*"
+                    />
+                <DataGridTextColumn
+                    x:Name="colLastName"
+                    Header="Last Name"
+                    Width="*"
+                    />
+                <DataGridTextColumn
+                    x:Name="colDateOfBirth"
+                    Header="Birthday"
+                    Width="*"
+                    />
+                <DataGridTextColumn
+                    x:Name="colGender"
+                    Header="Gender"
+                    Width="Auto"
+                    />
+            </DataGrid.Columns>
+
+        </DataGrid>
+
+
+
+
+    </DockPanel>
+</UserControl>
