@@ -37,12 +37,12 @@
             this.viewContainer = new System.Windows.Forms.SplitContainer();
             this.panelMaster = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.lblMasterCaption = new System.Windows.Forms.Label();
             this.toolStripMaster = new System.Windows.Forms.ToolStrip();
             this.btnFullScreenMaster = new System.Windows.Forms.ToolStripButton();
             this.detailsTabCollection = new System.Windows.Forms.TabControl();
             this.toolStripDetails = new System.Windows.Forms.ToolStrip();
             this.btnFullScreenDetails = new System.Windows.Forms.ToolStripButton();
+            this.lblMasterCaption = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panelActionPane = new System.Windows.Forms.Panel();
             this.navigationContainer = new System.Windows.Forms.FlowLayoutPanel();
@@ -98,7 +98,7 @@
             // 
             this.actionPaneContainer.Panel2.Controls.Add(this.panel4);
             this.actionPaneContainer.Size = new System.Drawing.Size(1101, 463);
-            this.actionPaneContainer.SplitterDistance = 897;
+            this.actionPaneContainer.SplitterDistance = 899;
             this.actionPaneContainer.SplitterWidth = 2;
             this.actionPaneContainer.TabIndex = 4;
             // 
@@ -110,7 +110,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(50, 50);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(797, 363);
+            this.panel2.Size = new System.Drawing.Size(799, 363);
             this.panel2.TabIndex = 2;
             // 
             // viewContainer
@@ -132,8 +132,8 @@
             this.viewContainer.Panel2.BackColor = System.Drawing.Color.White;
             this.viewContainer.Panel2.Controls.Add(this.detailsTabCollection);
             this.viewContainer.Panel2.Controls.Add(this.toolStripDetails);
-            this.viewContainer.Size = new System.Drawing.Size(797, 328);
-            this.viewContainer.SplitterDistance = 430;
+            this.viewContainer.Size = new System.Drawing.Size(799, 328);
+            this.viewContainer.SplitterDistance = 431;
             this.viewContainer.SplitterWidth = 5;
             this.viewContainer.TabIndex = 4;
             // 
@@ -144,7 +144,7 @@
             this.panelMaster.Location = new System.Drawing.Point(0, 0);
             this.panelMaster.Name = "panelMaster";
             this.panelMaster.Padding = new System.Windows.Forms.Padding(3);
-            this.panelMaster.Size = new System.Drawing.Size(430, 301);
+            this.panelMaster.Size = new System.Drawing.Size(431, 301);
             this.panelMaster.TabIndex = 0;
             // 
             // panel3
@@ -155,22 +155,8 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(430, 0);
+            this.panel3.Size = new System.Drawing.Size(431, 0);
             this.panel3.TabIndex = 0;
-            // 
-            // lblMasterCaption
-            // 
-            this.lblMasterCaption.AutoEllipsis = true;
-            this.lblMasterCaption.AutoSize = true;
-            this.lblMasterCaption.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblMasterCaption.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMasterCaption.Location = new System.Drawing.Point(0, 0);
-            this.lblMasterCaption.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
-            this.lblMasterCaption.Name = "lblMasterCaption";
-            this.lblMasterCaption.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
-            this.lblMasterCaption.Size = new System.Drawing.Size(145, 35);
-            this.lblMasterCaption.TabIndex = 1;
-            this.lblMasterCaption.Text = "Master Caption";
             // 
             // toolStripMaster
             // 
@@ -183,7 +169,7 @@
             this.toolStripMaster.Location = new System.Drawing.Point(0, 301);
             this.toolStripMaster.Name = "toolStripMaster";
             this.toolStripMaster.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStripMaster.Size = new System.Drawing.Size(430, 27);
+            this.toolStripMaster.Size = new System.Drawing.Size(431, 27);
             this.toolStripMaster.TabIndex = 1;
             this.toolStripMaster.Text = "toolStrip2";
             // 
@@ -205,7 +191,7 @@
             this.detailsTabCollection.Margin = new System.Windows.Forms.Padding(0);
             this.detailsTabCollection.Name = "detailsTabCollection";
             this.detailsTabCollection.SelectedIndex = 0;
-            this.detailsTabCollection.Size = new System.Drawing.Size(362, 301);
+            this.detailsTabCollection.Size = new System.Drawing.Size(363, 301);
             this.detailsTabCollection.TabIndex = 0;
             // 
             // toolStripDetails
@@ -219,7 +205,7 @@
             this.toolStripDetails.Location = new System.Drawing.Point(0, 301);
             this.toolStripDetails.Name = "toolStripDetails";
             this.toolStripDetails.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStripDetails.Size = new System.Drawing.Size(362, 27);
+            this.toolStripDetails.Size = new System.Drawing.Size(363, 27);
             this.toolStripDetails.TabIndex = 0;
             this.toolStripDetails.Text = "toolStrip1";
             // 
@@ -234,6 +220,20 @@
             this.btnFullScreenDetails.Text = "toolStripButton1";
             this.btnFullScreenDetails.ToolTipText = "Full screen";
             // 
+            // lblMasterCaption
+            // 
+            this.lblMasterCaption.AutoEllipsis = true;
+            this.lblMasterCaption.AutoSize = true;
+            this.lblMasterCaption.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblMasterCaption.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMasterCaption.Location = new System.Drawing.Point(0, 0);
+            this.lblMasterCaption.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
+            this.lblMasterCaption.Name = "lblMasterCaption";
+            this.lblMasterCaption.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
+            this.lblMasterCaption.Size = new System.Drawing.Size(145, 35);
+            this.lblMasterCaption.TabIndex = 1;
+            this.lblMasterCaption.Text = "Master Caption";
+            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.LightSlateGray;
@@ -243,7 +243,7 @@
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
             this.panel4.Padding = new System.Windows.Forms.Padding(10);
-            this.panel4.Size = new System.Drawing.Size(202, 463);
+            this.panel4.Size = new System.Drawing.Size(200, 463);
             this.panel4.TabIndex = 0;
             // 
             // panelActionPane
@@ -252,7 +252,7 @@
             this.panelActionPane.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelActionPane.Location = new System.Drawing.Point(10, 10);
             this.panelActionPane.Name = "panelActionPane";
-            this.panelActionPane.Size = new System.Drawing.Size(180, 441);
+            this.panelActionPane.Size = new System.Drawing.Size(178, 441);
             this.panelActionPane.TabIndex = 3;
             // 
             // navigationContainer
