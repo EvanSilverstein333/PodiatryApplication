@@ -172,12 +172,6 @@
     <Compile Include="Views\Patient\PatientActionPane.xaml.cs">
       <DependentUpon>PatientActionPane.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Patient\PatientActionPane2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\Patient\PatientActionPane2.Designer.cs">
-      <DependentUpon>PatientActionPane2.cs</DependentUpon>
-    </Compile>
     <Compile Include="Dialogs\NewFinancialAccountDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -203,18 +197,6 @@
     <Compile Include="Views\FinancialAccount\FinanacialAccountDetails.Designer.cs">
       <DependentUpon>FinanacialAccountDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\ContactInformation\ContactInformationView.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\ContactInformation\ContactInformationView.Designer.cs">
-      <DependentUpon>ContactInformationView.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Healthcard\HealthcardView.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\Healthcard\HealthcardView.Designer.cs">
-      <DependentUpon>HealthcardView.cs</DependentUpon>
-    </Compile>
     <Compile Include="Views\OrchestratorView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -232,12 +214,6 @@
     </Compile>
     <Compile Include="Views\Patient\PatientIndex.xaml.cs">
       <DependentUpon>PatientIndex.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Patient\PatientIndex2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\Patient\PatientIndex2.designer.cs">
-      <DependentUpon>PatientIndex2.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\PatientVisit\PatientVisitIndex.cs">
       <SubType>Form</SubType>
@@ -272,9 +248,6 @@
     <EmbeddedResource Include="Views\PatientVisit\PatientVisitActionPane.resx">
       <DependentUpon>PatientVisitActionPane.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Patient\PatientActionPane2.resx">
-      <DependentUpon>PatientActionPane2.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Dialogs\NewFinancialAccountDialog.resx">
       <DependentUpon>NewFinancialAccountDialog.cs</DependentUpon>
     </EmbeddedResource>
@@ -287,17 +260,8 @@
     <EmbeddedResource Include="Views\FinancialAccount\FinanacialAccountDetails.resx">
       <DependentUpon>FinanacialAccountDetails.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\ContactInformation\ContactInformationView.resx">
-      <DependentUpon>ContactInformationView.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\Healthcard\HealthcardView.resx">
-      <DependentUpon>HealthcardView.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Views\OrchestratorView.resx">
       <DependentUpon>OrchestratorView.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\Patient\PatientIndex2.resx">
-      <DependentUpon>PatientIndex2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\PatientVisit\PatientVisitIndex.resx">
       <DependentUpon>PatientVisitIndex.cs</DependentUpon>
